@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../constants";
 
 // Styled button component
 const StyledButton = styled.button`
@@ -17,6 +18,11 @@ const StyledButton = styled.button`
 
   &:active {
     box-shadow: inset 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+  @media screen and ${devices.mobileL} {
+    padding: 5px 10px;
+    font-size: 14px;
+    min-width: fit-content;
   }
 `;
 

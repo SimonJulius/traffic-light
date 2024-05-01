@@ -96,7 +96,7 @@ export default function App() {
     return () => {
       clearTimeout(timerId);
     };
-  }, [dCurColor, dCurColor1, testCofigSettings]);
+  }, [dCurColor, dCurColor1, testCofigSettings, testCofigSettings1]);
 
   return (
     <div className="wrapper">

@@ -84,3 +84,16 @@ body {
   padding: 20px;
   border-radius: 50%;
 }
+
+@media screen and (max-width: 540px) {
+  .right-light {
+    right: 0;
+  }
+  .left-light {
+    left: 0;
+  }
+  .controllers {
+    height: 80px;
+    width: 80px;
+  }
+}
