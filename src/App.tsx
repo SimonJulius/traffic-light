@@ -1,11 +1,29 @@
-import TrafficLight from "./components/TrafficLight";
+import TrafficLight, { TrafficColors } from "./components/TrafficLight";
 
 import "./App.css";
 import { useEffect, useState } from "react";
 import PressableButton from "./components/button";
 
+interface Config {
+  red: {
+    backgroundColor: TrafficColors;
+    duration: number;
+    next: TrafficColors;
+  };
+  yellow: {
+    backgroundColor: TrafficColors;
+    duration: number;
+    next: TrafficColors;
+  };
+  green: {
+    backgroundColor: TrafficColors;
+    duration: number;
+    next: TrafficColors;
+  };
+}
+
 export default function App() {
-  const [testCofigSettings, setTestCofigSettings] = useState({
+  const [testCofigSettings, setTestCofigSettings] = useState<Config>({
     red: {
       backgroundColor: "red",
       duration: 10000,
@@ -22,7 +40,7 @@ export default function App() {
       next: "yellow",
     },
   });
-  const [testCofigSettings1, setTestCofigSettings1] = useState({
+  const [testCofigSettings1, setTestCofigSettings1] = useState<Config>({
     red: {
       backgroundColor: "red",
       duration: 10000,
