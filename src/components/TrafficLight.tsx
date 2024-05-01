@@ -2,27 +2,26 @@ import Light from "./Light";
 import TrafficLightContainer from "./TrafficLightContainer";
 // import { devices } from "../constants";
 
-type TrafficColors = "yellow" | "red" | "green";
+export type TrafficColors = "yellow" | "red" | "green";
 
 interface TrafficLightProps {
   config: {
     red: {
-      backgroundColor: "green" | "red" | "yellow";
+      backgroundColor: TrafficColors;
       duration: number;
-      next: "green" | "red" | "yellow";
+      next: TrafficColors;
     };
     yellow: {
-      backgroundColor: "green" | "red" | "yellow";
+      backgroundColor: TrafficColors;
       duration: number;
-      next: "green" | "red" | "yellow";
+      next: TrafficColors;
     };
     green: {
-      backgroundColor: "green" | "red" | "yellow";
+      backgroundColor: TrafficColors;
       duration: number;
-      next: "green" | "red" | "yellow";
+      next: TrafficColors;
     };
   };
-  layout: "vertical" | "horizontal";
   curColor: string;
 }
 
